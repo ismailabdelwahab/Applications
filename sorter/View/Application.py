@@ -6,6 +6,7 @@ import threading
 from random import shuffle
 
 from Model.Sorting_algorithms.Bubble_sort import bubble_sort
+from Model.Sorting_algorithms.Insert_sort import insert_sort
 from Model.Sorting_algorithms.Quick_sort import quick_sort
 from Model.Sorting_algorithms.Merge_sort import merge_sort
 
@@ -93,6 +94,9 @@ class Application(tk.Frame):
 		bubble_sort_button= tk.Button(left_pannel, text="Bubble sort", fg="purple",
 			command= lambda : threading.Thread(target=bubble_sort, args=[self, self.array]).start())
 		bubble_sort_button.grid(row=4, column=0)
+		insert_sort_button= tk.Button(left_pannel, text="Insert sort", fg="purple",
+			command= lambda : threading.Thread(target=insert_sort, args=[self, self.array]).start())
+		insert_sort_button.grid(row=4, column=1)
 
 		####################################################### ROW = 6 - 8
 		### O( n*log(n) ) Algos:
