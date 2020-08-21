@@ -1,0 +1,9 @@
+# Personal zip backups
+*.zip
+
+# vim related files
+*.swp
+*.swo
+
+# Personal todo file
+task.TODO
