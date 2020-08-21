@@ -7,6 +7,8 @@ from random import shuffle
 
 from Model.Sorting_algorithms.Bubble_sort import bubble_sort
 from Model.Sorting_algorithms.Quick_sort import quick_sort
+from Model.Sorting_algorithms.Merge_sort import merge_sort
+
 
 class Application(tk.Frame):
 	WINDOW_DIMENSION = "1000x420"
@@ -43,6 +45,7 @@ class Application(tk.Frame):
 
 	def update_array_len(self, n):
 		self.array = [x for x in range(n)]
+		print("Array length updated to [ {} ].".format(str(n)))
 		self.redraw()
 
 ############# Creating stuff ######################################################################################
@@ -98,6 +101,10 @@ class Application(tk.Frame):
 		quick_sort_button= tk.Button(left_pannel, text="Quick sort", fg="purple",
 			command= lambda : threading.Thread(target=quick_sort, args=[self, self.array,0, len(self.array)-1]).start())
 		quick_sort_button.grid(row=7, column=0)
-		
+		merge_sort_button= tk.Button(left_pannel, text="Merge sort", fg="purple",
+			command= lambda : threading.Thread(target=merge_sort, args=[self, self.array,0, len(self.array)-1]).start())
+		merge_sort_button.grid(row=7, column=1)
+
+		####################################################### ROW = 10
 		self.quit = tk.Button(left_pannel, text="QUIT", fg="red",command=self.master.destroy)
 		self.quit.grid(row=10, column=1)
