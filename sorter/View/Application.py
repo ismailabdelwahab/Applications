@@ -8,6 +8,8 @@ from random import shuffle
 from Model.Sorting_algorithms.Bubble_sort import bubble_sort
 from Model.Sorting_algorithms.Insert_sort import insert_sort
 from Model.Sorting_algorithms.Selection_sort import selection_sort
+from Model.Sorting_algorithms.Cocktail_shaker_sort import cocktail_shaker_sort
+
 from Model.Sorting_algorithms.Quick_sort import quick_sort
 from Model.Sorting_algorithms.Merge_sort import merge_sort
 
@@ -100,6 +102,9 @@ class Application(tk.Frame):
 		selection_sort_button= tk.Button(left_pannel, text="Selection sort", fg="purple",
 			command= lambda : threading.Thread(target=selection_sort, args=[self, self.array]).start())
 		selection_sort_button.grid(row=4, column=2)
+		cocktail_shaker_sort_button= tk.Button(left_pannel, text="Cocktail shaker", fg="purple",
+			command= lambda : threading.Thread(target=cocktail_shaker_sort, args=[self, self.array]).start())
+		cocktail_shaker_sort_button.grid(row=5, column=0)
 
 		####################################################### ROW = 6 - 8 ### O( n*log(n) ) Algos:
 		n_log_n = tk.Label( left_pannel, text="O(n*log(n)) algorithms:" )
