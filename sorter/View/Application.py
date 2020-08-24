@@ -16,7 +16,7 @@ from Model.Sorting_algorithms.Merge_sort import merge_sort
 
 
 class Application(tk.Frame):
-	WINDOW_DIMENSION = "1000x420"
+	WINDOW_DIMENSION = "1040x420"
 	CANVAS_WIDTH = 600
 	CANVAS_HEIGHT = 400
 	CANVAS_BG = "black"
