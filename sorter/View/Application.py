@@ -7,6 +7,7 @@ from random import shuffle
 
 from Model.Sorting_algorithms.Bubble_sort import bubble_sort
 from Model.Sorting_algorithms.Insert_sort import insert_sort
+from Model.Sorting_algorithms.Selection_sort import selection_sort
 from Model.Sorting_algorithms.Quick_sort import quick_sort
 from Model.Sorting_algorithms.Merge_sort import merge_sort
 
@@ -87,8 +88,7 @@ class Application(tk.Frame):
 		suffle_array_button.grid(row=1, column=2)
 		####################################################### ROW = 2
 
-		####################################################### ROW = 3 - 5
-		### O( n² ) Algos:
+		####################################################### ROW = 3 - 5 ### O( n² ) Algos:
 		n_squared = tk.Label( left_pannel, text="O(n²) algorithms:" )
 		n_squared.grid(row=3, column=0)
 		bubble_sort_button= tk.Button(left_pannel, text="Bubble sort", fg="purple",
@@ -97,9 +97,11 @@ class Application(tk.Frame):
 		insert_sort_button= tk.Button(left_pannel, text="Insert sort", fg="purple",
 			command= lambda : threading.Thread(target=insert_sort, args=[self, self.array]).start())
 		insert_sort_button.grid(row=4, column=1)
+		selection_sort_button= tk.Button(left_pannel, text="Selection sort", fg="purple",
+			command= lambda : threading.Thread(target=selection_sort, args=[self, self.array]).start())
+		selection_sort_button.grid(row=4, column=2)
 
-		####################################################### ROW = 6 - 8
-		### O( n*log(n) ) Algos:
+		####################################################### ROW = 6 - 8 ### O( n*log(n) ) Algos:
 		n_log_n = tk.Label( left_pannel, text="O(n*log(n)) algorithms:" )
 		n_log_n.grid(row=6, column=0)
 		quick_sort_button= tk.Button(left_pannel, text="Quick sort", fg="purple",
