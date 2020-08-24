@@ -6,9 +6,10 @@ import threading
 from random import shuffle
 
 from Model.Sorting_algorithms.Bubble_sort import bubble_sort
+from Model.Sorting_algorithms.Cocktail_shaker_sort import cocktail_shaker_sort
 from Model.Sorting_algorithms.Insert_sort import insert_sort
 from Model.Sorting_algorithms.Selection_sort import selection_sort
-from Model.Sorting_algorithms.Cocktail_shaker_sort import cocktail_shaker_sort
+from Model.Sorting_algorithms.Gnome_sort import gnome_sort
 
 from Model.Sorting_algorithms.Quick_sort import quick_sort
 from Model.Sorting_algorithms.Merge_sort import merge_sort
@@ -31,7 +32,7 @@ class Application(tk.Frame):
 	def fill_canvas(self, i=-1, j=-1):
 		X_PADDING = 3 ; Y_PADDING = 5
 		c_width = int(self.canvas['width']) ; c_heigth = int(self.canvas['height']) - Y_PADDING
-		block_width = c_width / len(self.array) ; block_heigth = c_heigth / max(self.array)
+		block_width = c_width / len(self.array) ; block_heigth = c_heigth / len(self.array)
 
 		for index, num in enumerate(self.array):
 			color = 'white' if index != i else 'red'
@@ -96,15 +97,18 @@ class Application(tk.Frame):
 		bubble_sort_button= tk.Button(left_pannel, text="Bubble sort", fg="purple",
 			command= lambda : threading.Thread(target=bubble_sort, args=[self, self.array]).start())
 		bubble_sort_button.grid(row=4, column=0)
-		insert_sort_button= tk.Button(left_pannel, text="Insert sort", fg="purple",
-			command= lambda : threading.Thread(target=insert_sort, args=[self, self.array]).start())
-		insert_sort_button.grid(row=4, column=1)
-		selection_sort_button= tk.Button(left_pannel, text="Selection sort", fg="purple",
-			command= lambda : threading.Thread(target=selection_sort, args=[self, self.array]).start())
-		selection_sort_button.grid(row=4, column=2)
 		cocktail_shaker_sort_button= tk.Button(left_pannel, text="Cocktail shaker", fg="purple",
 			command= lambda : threading.Thread(target=cocktail_shaker_sort, args=[self, self.array]).start())
-		cocktail_shaker_sort_button.grid(row=5, column=0)
+		cocktail_shaker_sort_button.grid(row=4, column=1)
+		insert_sort_button= tk.Button(left_pannel, text="Insert sort", fg="purple",
+			command= lambda : threading.Thread(target=insert_sort, args=[self, self.array]).start())
+		insert_sort_button.grid(row=5, column=0)
+		selection_sort_button= tk.Button(left_pannel, text="Selection sort", fg="purple",
+			command= lambda : threading.Thread(target=selection_sort, args=[self, self.array]).start())
+		selection_sort_button.grid(row=5, column=1)
+		gnome_sort_button= tk.Button(left_pannel, text="Gnome sort", fg="purple",
+			command= lambda : threading.Thread(target=gnome_sort, args=[self, self.array]).start())
+		gnome_sort_button.grid(row=5, column=2)
 
 		####################################################### ROW = 6 - 8 ### O( n*log(n) ) Algos:
 		n_log_n = tk.Label( left_pannel, text="O(n*log(n)) algorithms:" )
