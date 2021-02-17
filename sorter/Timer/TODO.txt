@@ -1,5 +1,0 @@
-Make a python function that takes in argument:
-	-another function
-	-the args of this other function
-
-Launches the function and print the time taken to execute this function
