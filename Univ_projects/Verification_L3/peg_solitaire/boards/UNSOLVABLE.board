@@ -1,0 +1,11 @@
+#This board is the european board of the game.
+  ooo  
+ ooooo 
+ooooooo
+oooXooo
+ooooooo
+ ooooo 
+  ooo  
+#As the initial hole on the board is in the middle,
+#this game is not winnable, 
+#(ie.you cannot end up in a position with only one peg left)

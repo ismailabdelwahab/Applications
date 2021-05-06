@@ -1,0 +1,11 @@
+/*#############  GLOBAL VARIABLES #################### */
+mtype = {UNDEF, present, absent};
+typedef array { mtype c[NB_COL] };
+
+int i, j;
+int nbPegs = nb_initial_pegs;
+/* Board usage: r[2].c[1] is the square on the 2nd ROW and 1st Column
+	in cartesian coordinates: (x=1, y=2) 
+	indexed from the top left corner of the board.*/
+array r[NB_ROW];
+

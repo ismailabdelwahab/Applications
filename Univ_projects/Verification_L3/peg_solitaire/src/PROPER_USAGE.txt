@@ -1,0 +1,16 @@
+ Proper Usage: ./generate_pml_file <your_board_file>
+
+Some board are available in boards/ as examples and can be used.
+
+		If you want to create your own board:
+You must create your own board in a text file with the following rules:
+	1) Your file must represent a RECTANGLE in which there is your board.
+	2) Characters used:
+		- "o" is a peg
+		- "X" is the first hole on the board
+		- " " [space character] represents a position that
+		  does not exists on the board. 
+		  (ie position that is from your RECTANGLE but not on the board) 
+	3) Comment are accepted:
+		A comment must start on a new line with "#" as first caracter
+	4) Blank lines and Empty new lines are forbiden.

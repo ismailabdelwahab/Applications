@@ -1,0 +1,5 @@
+/*################ Procedures ########################*/
+proctype play_game(){
+move:
+if :: (nbPegs==1) -> goto end :: skip; fi
+//Choose indexes "i" and "j":

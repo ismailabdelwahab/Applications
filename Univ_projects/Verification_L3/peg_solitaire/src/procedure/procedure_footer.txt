@@ -1,0 +1,43 @@
+if
+//Block is not defined in the game:
+::( r[i].c[j]==UNDEF ) -> goto move
+//Jump up    :
+::( i>=2 && r[i].c[j]==present &&
+  r[i-1].c[j]==present && r[i-2].c[j]==absent)->
+        printf("Go up   : [%d;%d] ↑\n",i,j); goto jump_up;
+//Jump right :
+::( j<=NB_COL-3 && r[i].c[j]==present &&
+  r[i].c[j+1]==present && r[i].c[j+2]==absent)->
+        printf("Go right: [%d;%d] →\n",i,j); goto jump_right
+//Jump down  :
+::( i<=NB_ROW-3 && r[i].c[j]==present &&
+  r[i+1].c[j]==present && r[i+2].c[j]==absent)->
+        printf("Go down : [%d;%d] ↓\n",i,j);goto jump_down
+//Jump left  :
+::( j>=2 && r[i].c[j]==present &&
+  r[i].c[j-1]==present && r[i].c[j-2]==absent)->
+        printf("Go left : [%d;%d] ←\n",i,j);goto jump_left
+//No jumps are possible
+::(1==1) -> goto move
+fi
+
+jump_up: atomic{
+	r[i].c[j]=absent; r[i-1].c[j]=absent; r[i-2].c[j]=present; 
+	nbPegs-- -> goto move;
+};
+jump_right: atomic{
+ 	r[i].c[j]=absent; r[i].c[j+1]=absent; r[i].c[j+2]=present;
+	nbPegs-- -> goto move;
+};
+jump_down: atomic{
+	r[i].c[j]=absent; r[i+1].c[j]=absent; r[i+2].c[j]=present;
+	nbPegs-- -> goto move;
+};
+jump_left: atomic{ 
+	r[i].c[j]=absent; r[i].c[j-1]=absent; r[i].c[j-2]=present;
+	nbPegs-- -> goto move; 
+};
+end: skip;
+}
+
+

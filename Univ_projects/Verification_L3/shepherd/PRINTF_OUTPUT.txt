@@ -1,0 +1,12 @@
+                          The {{shepherd}} if going [RIGHT].
+              The [sheep] is coming with him to the [RIGHT].
+                          The {{shepherd}} if going [LEFT] but he is [ALONE].
+                          The {{shepherd}} if going [RIGHT].
+                      The [wolf] followed him to the [RIGHT].
+                          The {{shepherd}} if going [LEFT].
+              The [sheep] is coming with him to the [LEFT].
+                          The {{shepherd}} if going [RIGHT].
+                  He takes the [cabbage] with him.
+                          The {{shepherd}} if going [LEFT] but he is [ALONE].
+                          The {{shepherd}} if going [RIGHT].
+              The [sheep] is coming with him to the [RIGHT].

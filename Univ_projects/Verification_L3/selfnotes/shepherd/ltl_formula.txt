@@ -1,0 +1,41 @@
+################ SAFE_LEFT: ################################# 
+Represent the fact that there is no conflicts on the
+left side of the river.
+-------------------------------------------------------------
+              INFORMAL : 
+(test && (wolf&&sheep_are_left||sheep&&cabbage_left))->shepherd_is_left
+              LTL : 
+	((test &&((!l && !m) || (!m && !c)))->!b)
+#################################################i############
+
+################ SAFE_RIGHT: ################################
+Represent the fact that there is no conflicts on the
+right side of the river.
+-------------------------------------------------------------
+              INFORMAL : 
+(test && (wolf&&sheep_are_right||sheep&&cabbage_are_right))->shepherd_is_right
+              LTL :
+	((test &&((l && m) || (m && c)))->b)
+#############################################################
+
+################# END: ######################################
+This is the final position that we need to reach
+-------------------------------------------------------------
+              INFORMAL : 
+wolf && sheep && cabbage && shepherd  are all to the right.
+              LTL :
+       (l && m && c && b)
+#############################################################
+
+############## LTL complete formulae:########################
+Final ltl formula that we use in our never code
+-------------------------------------------------------------
+              INFORMAL : 
+       SAFE_LEFT && SAFE_RIGHT U END
+              LTL:
+       (
+              ((test &&((!l && !m) || (!m && !c)))->!b) &&
+              (((test && ((l && m)||(m && c)))->b)) 
+       )      
+       U (l && m && c && b)
+#############################################################

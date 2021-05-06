@@ -1,0 +1,22 @@
+REMINDER: Board is 2D array of Pons which can be UNDEF, present or absent.
+########################### Make a move ###########################
+A pon must be able to jump over another and land on a space.
+Ideas:
+	-> Check all pons if they can jump, then 1/2 chance to do it
+	-> Check on every hole if a pon can jump over another and
+	   get this place.
+Either case, calculation take a lot of time, due to a lot of possibilities.
+
+########################### Scanning process ###########################
+We must check how do we scan the 2D array, as some squares of the board,
+will be more scanned than other if we just use a "double for loop"
+################## First try on small board (3x3) #####################
+First step test our board representation and mechanics on a 3x3 board.
+
+################### Amelioration done ################################
+New compilation options have been added to produce pan.
+(check compile.sh script to see those options)
+we can also execute pan with 
+	-I option (like -i but faster)
+    AND -w20 (changes the size of hashtable, make computation faster)
+

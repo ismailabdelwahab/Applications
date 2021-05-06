@@ -1,0 +1,8 @@
+
+/* ----- Add first hole ----- */
+r[first_hole_Y].c[first_hole_X] = absent;
+/* ----- Launch the game ------ */
+printf("GO {direction} : [ROW number;Column number] {arrow direction}\n");
+run play_game();
+}
+

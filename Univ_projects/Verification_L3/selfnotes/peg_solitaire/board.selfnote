@@ -1,0 +1,28 @@
+TODO: Find a way to represent the board
+######################################################################
+Board could be 2D array ???
+Code extracted from :
+https://stackoverflow.com/questions/58748279/how-to-create-two-dimensional-array-in-promela
+
+typedef array { /* typedefs must be global */
+    byte aa[4]
+};
+init {
+    array a[8];   /* 8x4 = 32 bytes total */
+    a[3].aa[1] = 5
+}
+######################################################################
+European board:
+     · · ·
+   · · · · ·
+ · · · · · · · 
+ · · · o · · · 
+ · · · · · · · 
+   · · · · ·
+     · · ·
+7x7 board where you remove 3 positions on each corners of the square.
+################### Pon Modelisation ###################################
+EDIT : Pons will be a struct defined as:
+  UNDEF   ==> not a possible square for a pon
+  absent  ==> pon is absent
+  present ==> pon is present.

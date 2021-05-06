@@ -1,0 +1,9 @@
+/*#################### Init ##########################*/
+init{
+/* ----- Fill the board ----- */
+for ( i : 0 .. NB_ROW-1 ) {
+	for( j : 0 .. NB_COL-1 ){
+		r[i].c[j]=present
+	}
+};
+/* ----- Remove undefined blocks ----- */

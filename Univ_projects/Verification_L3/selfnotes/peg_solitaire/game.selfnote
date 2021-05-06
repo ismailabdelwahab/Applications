@@ -1,0 +1,14 @@
+Players: 
+ Game is single player.	so NB_PLAYER = 1
+
+Rule to win:
+ A) Only one pon is left on the board
+ B) {OPTIONAL} in some game mode, the last pon must land on the
+ first hole of the initial position
+
+Mechanics:
+ 1) A pon can jump over another if there is a blank space
+    where he land.
+	Example:
+    [ X Y . ] can change to: [ . . X ] 
+    Where X jumped over Y and land on a space (maked with ".")
