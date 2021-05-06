@@ -1,0 +1,5 @@
+SERVERCONNECT localhost 12347
+LOGIN client_3
+MESSAGE i'm connected to the third client
+MESSAGE i hope you all see my messages
+MESSAGE goodbye

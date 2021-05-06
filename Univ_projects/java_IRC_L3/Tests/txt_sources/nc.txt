@@ -1,0 +1,7 @@
+LOGIN nc_client
+MESSAGE Hi i'm the nc_client
+MESSAGE Unfortunatly nobody is here :/
+MESSAGE Oh hi jak 
+MESSAGE I see that he already left ... :(
+MESSAGE My next message will also be an error: check what the server returns.
+abcdefghijklmnopqrstuvwxyz

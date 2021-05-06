@@ -1,0 +1,6 @@
+SERVERCONNECT localhost 12345
+LOGIN client_1
+MESSAGE I'm the first client
+MESSAGE i'm just waiting now
+MESSAGE oh yeah i see you
+MESSAGE well goodbye

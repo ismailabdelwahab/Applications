@@ -1,0 +1,14 @@
+>Launching server on port: 12347
+>>>>>>> New user connected: [/127.0.0.1:59388] as: [client_1]
+>>>>>>> New user connected: [/127.0.0.1:59386] as: [client0]
+[client0]: i'm client 0, how are you all?
+[client0]: roses are red
+[client0]: the sky is blue
+[client0]: my name is ned
+[client0]: i'm a client and i'm new
+<<<<<< Client disconnected: [/127.0.0.1:59386] as: client0
+[client_1]: I'm the first client
+[client_1]: i'm just waiting now
+[client_1]: oh yeah i see you
+[client_1]: well goodbye
+<<<<<< Client disconnected: [/127.0.0.1:59388] as: client_1

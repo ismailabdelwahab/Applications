@@ -1,0 +1,6 @@
+LOGIN client0
+MESSAGE i'm client 0, how are you all?
+MESSAGE roses are red
+MESSAGE the sky is blue
+MESSAGE my name is ned
+MESSAGE i'm a client and i'm new

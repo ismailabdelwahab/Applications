@@ -1,0 +1,4 @@
+SERVERCONNECT locahost 12346
+LOGIN client_2
+MESSAGE i'm client2 and i'm doing fine
+MESSAGE i'm client2 and i'm disconnecting

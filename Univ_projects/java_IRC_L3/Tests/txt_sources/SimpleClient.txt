@@ -1,0 +1,5 @@
+LOGIN JAK
+MESSAGE This is my first message
+MESSAGE second message
+MESSAGE My next message will be an error!
+Thisisnotagoodmessage
